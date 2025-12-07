@@ -56,9 +56,10 @@ robot-imitation-learning-framework/
 
 ## 📌 Expert Demonstration Format
 
-> Dataset is **not included**.  
-> Add your expert demonstrations at:  
-> `data/expert_data.csv`
+Add your expert demonstrations to:  
+```bash
+`data/expert_data.csv`
+```
 
 | Column  | Description                         |
 |---------|-------------------------------------|
@@ -96,16 +97,31 @@ checkpoints/discriminator_gail.pth
 
 🧠 Why Brachiation?
 
-Brachiation is underactuated and contact-rich, requiring precise swing dynamics and timing.
-This makes it an excellent benchmark for studying robotic locomotion control through imitation learning.
+Brachiation is:
 
-Our goal is to provide a reproducible and extendable platform for IL research on such complex motion tasks.
+underactuated
+
+highly dynamic
+
+contact-rich
+
+requires precise swing timing
+
+These properties make it an ideal benchmark for adversarial imitation learning and learned control in challenging robotic locomotion tasks.
+
+Our goal is to build a reproducible and extendable research platform for state-of-the-art IL in robotics.
 
 👤 Author
 
 Anubhav Tripathi
 
-Feel free to contribute, open issues, or share results! 🚀
+🙌 Contributions
+
+Open for issues, pull requests, and extensions!
+If you build an IL method on this framework, please share! 🚀
+
+
+
 
 
 ---
