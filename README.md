@@ -89,6 +89,8 @@ Checkpoints will be saved to:
 checkpoints/policy_gail.pth
 checkpoints/discriminator_gail.pth
 
+```
+
 🧠 Why Brachiation?
 
 Brachiation is underactuated and contact-rich, requiring precise swing dynamics and timing.
