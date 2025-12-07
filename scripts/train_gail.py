@@ -11,11 +11,10 @@ from il_lib.replay import ReplayBuffer
 from il_lib.trainer.gail_trainer import GAILTrainer
 
 
-
 def main():
     # --------- Paths ---------
-    xml_path = "/home/anubhav/Documents/dm_control/dm_control/suite/acrobot_multiple_allegro.xml"
-    expert_path = "/home/anubhav/Documents/dm_control/dm_control/suite/Data/merged_imitation_data.csv"
+    xml_path = "add path to you xml file here"
+    expert_path = "add you expert dataset path here"
 
     # --------- Environment ---------
     env = BrachiationEnv(xml_path=xml_path, simend=20.0)
