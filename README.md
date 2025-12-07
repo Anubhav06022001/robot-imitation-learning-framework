@@ -52,7 +52,6 @@ robot-imitation-learning-framework/
 │  └─ .gitkeep                # Place expert data here
 │
 └─ README.md
----
 
 ## 📌 Expert Demonstration Format
 
@@ -105,9 +104,3 @@ Feel free to contribute, open issues, or share results! 🚀
 
 ---
 
-After replacing and saving:
-
-```bash
-git add README.md
-git commit -m "Fix table and code blocks in README"
-git push -u origin main --force
