@@ -52,6 +52,7 @@ robot-imitation-learning-framework/
 │  └─ .gitkeep                # Place expert data here
 │
 └─ README.md
+```
 
 ## 📌 Expert Demonstration Format
 
@@ -78,10 +79,10 @@ Install dependencies:
 
 ```bash
 pip install torch mujoco gymnasium pandas numpy
+
 Run training:
 
 python scripts/train_gail.py
-
 
 Checkpoints will be saved to:
 
