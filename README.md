@@ -58,7 +58,7 @@ robot-imitation-learning-framework/
 
 > Dataset is **not included**.  
 > Add your expert demonstrations at:  
-> `data/merged_imitation_data.csv`
+> `data/expert_data.csv`
 
 | Column  | Description                         |
 |---------|-------------------------------------|
