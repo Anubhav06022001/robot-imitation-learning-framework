@@ -79,16 +79,19 @@ Install dependencies:
 
 ```bash
 pip install torch mujoco gymnasium pandas numpy
+```
 
 Run training:
 
+```bash
 python scripts/train_gail.py
+```
 
 Checkpoints will be saved to:
 
+```bash
 checkpoints/policy_gail.pth
 checkpoints/discriminator_gail.pth
-
 ```
 
 🧠 Why Brachiation?
