@@ -1,0 +1,5 @@
+echo "__pycache__/" >> .gitignore
+echo "*.pth" >> .gitignore
+echo "checkpoints/" >> .gitignore
+echo ".idea/" >> .gitignore
+echo ".vscode/" >> .gitignore
