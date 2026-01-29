@@ -14,9 +14,9 @@ conda activate robot-il
 
 Currently supported:
 - GAIL – Generative Adversarial Imitation Learning ✔
+- AIRL – Adversarial IRL ✔ 
 
 Upcoming algorithms (will be uploaded soon):
-- AIRL – Adversarial IRL  
 - DAgger – Dataset Aggregation  
 - Residual Diffusion Imitation Policies  
 - GAIL-ES – Evolution Strategies + GAIL  
