@@ -4,6 +4,11 @@ A modular framework for **imitation learning in robotics**, currently focused on
 The system is task-agnostic — provide expert demonstrations, and it learns the behavior.
 
 ---
+## Installation
+```bash
+conda env create -f environment.yml
+conda activate robot-il
+```
 
 ## 🔥 Implemented & Upcoming Methods
 

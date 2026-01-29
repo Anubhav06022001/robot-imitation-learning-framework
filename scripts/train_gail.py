@@ -13,8 +13,8 @@ from il_lib.trainer.gail_trainer import GAILTrainer
 
 def main():
     # --------- Paths ---------
-    xml_path = "add path to you xml file here"
-    expert_path = "add you expert dataset path here"
+    xml_path = "/home/anubhav/Documents/dm_control/dm_control/suite/acrobot_multiple_allegro.xml"
+    expert_path = "/home/anubhav/Documents/dm_control/dm_control/suite/Data/merged_imitation_data.csv"
 
     # --------- Environment ---------
     env = BrachiationEnv(xml_path=xml_path, simend=20.0)
@@ -22,8 +22,8 @@ def main():
     act_dim = env.action_space.shape[0]
 
     # --------- Expert dataset ---------
-    obs_columns = ["time", "theta1", "theta2", "dtheta1", "dtheta2"]
-    act_columns = ["control"]
+    obs_columns = ["time", "theta1", "theta2", "dtheta1", "dtheta2"]      
+    act_columns = ["control"]      
     expert_dataset = ExpertDataset(expert_path, obs_columns, act_columns)
 
     # --------- Replay buffer ---------

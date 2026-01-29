@@ -26,7 +26,6 @@ class Discriminator(nn.Module):
         self.net = nn.Sequential(
             nn.Linear(obs_dim+act_dim, 128), nn.ReLU(),
             nn.Linear(128, 1)                       # No sigmoid here; we return logits and apply sigmoid in loss/reward
-            # nn.Linear(128, 1) , nn.Sigmoid()
         )
 
     def forward(self, obs, act):
@@ -37,6 +36,34 @@ class Discriminator(nn.Module):
         logits = self.forward(obs, act)
         return torch.sigmoid(logits)
 
+
+class RewardNet(nn.Module):
+    def __init__(self,obs_dim,act_dim):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(obs_dim+act_dim,128),nn.ReLU(),
+            nn.Linear(128,128), nn.ReLU(),
+            nn.Linear(128,1)
+        )
+
+    def forward(self, obs, act):
+        x= torch.cat([obs, act], dim = -1)
+        r = self.next(x)
+        return r.squeeze(-1)
+    
+
+class ValueNet():
+    def __init__(self, obs_dim):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(obs_dim, 128), nn.Relu(),
+            nn.Linear(128,128) , nn.Relu(),
+            nn.Linear(128, 1)
+        )
+    
+    def forward(self, obs):
+        v = self.net(obs)
+        return v.squeeze(-1)
     
 
 

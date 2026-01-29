@@ -16,7 +16,6 @@ class ReplayBuffer():
         obs_batch  = [self.obs_list[i] for i in idxs]
         act_batch = [self.act_list[i] for i in idxs]
         return obs_batch, act_batch
-        
 
     def __len__(self):
         return len(self.obs_list)

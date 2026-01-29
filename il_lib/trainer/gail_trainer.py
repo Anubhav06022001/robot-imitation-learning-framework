@@ -26,7 +26,6 @@ class GAILTrainer:
             lr=cfg.get("policy_lr", 3e-4)
         )
 
-
     def collect_trajectories(self):
         obs_list = []
         act_list = []
@@ -101,9 +100,9 @@ class GAILTrainer:
         labels_p = torch.zeros_like(logits_p)
 
         logits = torch.cat([logits_e, logits_p], dim=0)    # [B+B',1]
-        labels = torch.cat([labels_e, labels_p], dim=0)    # [B+B',1]
+        labels = torch.cat([labels_e, labels_p], dim=0)    # [B+B',1]   B = Batch Size
 
-        # --- 5) binary cross-entropy with logits ---
+        # --- 4) binary cross-entropy with logits ---
         bce = torch.nn.BCEWithLogitsLoss()
 
         self.disc_optim.zero_grad()
@@ -159,7 +158,6 @@ class GAILTrainer:
 
         return loss_pi.item()
 
-        
 
     def train(self):
         epochs = self.cfg.get("epochs", 100)

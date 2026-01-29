@@ -1,5 +1,24 @@
-echo "__pycache__/" >> .gitignore
-echo "*.pth" >> .gitignore
-echo "checkpoints/" >> .gitignore
-echo ".idea/" >> .gitignore
-echo ".vscode/" >> .gitignore
+# Python
+__pycache__/
+*.pyc
+*.pth
+
+# Training artifacts
+checkpoints/
+logs/
+
+# IDEs
+.idea/
+.vscode/
+
+# Conda / env
+.env
+venv/
+*.yml
+
+# MuJoCo
+mujoco/
+
+# Data
+data/
+*.csv
