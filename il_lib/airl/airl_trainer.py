@@ -1,6 +1,6 @@
 import torch
 import numpy as np
-# DELETE SHIFT TO AIRL FOLDER
+
 class AIRLTrainer:
     def __init__(self, env , policy, discriminator, replay_buffer, expert_dataset, cfg):
         self.env = env

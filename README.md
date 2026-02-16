@@ -28,6 +28,66 @@ This repository is actively evolving to benchmark **multiple IL algorithms** und
 ## 📁 Project Structure
 
 ```text
+
+robot-imitation-learning-framework/
+├─ il_lib/
+│  ├─ envs/
+│  │  └─ brachiation_env.py
+│  │
+│  ├─ datasets/
+│  │  ├─ expert_dataset.py        # generic (s,a) loader
+│  │  └─ airl_dataset.py          # (s,a,s',done) version
+│  │
+│  ├─ common/
+│  │  ├─ replay.py
+│  │  ├─ utils.py
+│  │  └─ trajectory_logger.py
+│  │
+│  ├─ models/
+│  │  ├─ policy_gaussian.py       # PolicyNetwork
+│  │  ├─ bc.py                    # BC_MLP
+│  │  ├─ reward_net.py            # AIRL RewardNet
+│  │  ├─ value_net.py             # AIRL ValueNet
+│  │  └─ diffusion_denoiser.py    # DiffusionDenoiser
+│  │
+│  ├─ gail/
+│  │  └─ gail_trainer.py
+│  │
+│  ├─ airl/
+│  │  └─ airl_trainer.py
+│  │
+│  ├─ diffusion/
+│  │  ├─ policy.py                # DiffusionPolicy
+│  │  ├─ sampling.py              # DDIM / sampling
+│  │  ├─ noise_schedule.py        # betas, alphas
+│  │  └─ trainer.py               # diffusion training
+│  │
+│  └─ dagger/
+│     └─ dagger_trainer.py        # (later)
+│
+├─ scripts/
+│  ├─ train_gail.py
+│  ├─ train_airl.py
+│  └─ train_diffusion.py
+│
+├─ configs/
+│  ├─ gail.yaml
+│  ├─ airl.yaml
+│  └─ diffusion.yaml
+│
+├─ data/
+│  └─ .gitkeep
+│
+├─ tests/
+│  └─ ...
+│
+└─ README.md
+
+
+
+
+
+
 robot-imitation-learning-framework/
 ├─ il_lib/
 │  ├─ envs.py                 # MuJoCo-based environments (BrachiationEnv)

@@ -2,7 +2,7 @@ import torch
 import random
 import torch.nn.functional as F
 import numpy as np
-# DELETE SHIFT TO GAIL FOLDER
+
 class GAILTrainer:
     def __init__(self, policy, discriminator, env, expert_dataset, replay_buffer, cfg):
         self.policy = policy

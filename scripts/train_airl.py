@@ -1,11 +1,10 @@
 from il_lib.envs import BrachiationEnv
 from il_lib.models import PolicyNetwork, RewardNet, ValueNet
 from il_lib.trainer.airl_trainer import AIRLTrainer
-from il_lib.expert_dataset import ExpertDatasetAIRL
+from il_lib.datasets.expert_dataset import ExpertDataset
 
-xml_path = "path/to/your/brachiation.xml"
-expert_csv = "data/expert_data.csv"      # provide ur csv file name here
-
+xml_path = "/home/anubhav/Documents/dm_control/dm_control/suite/acrobot_multiple_allegro.xml"
+expert_csv = "/home/anubhav/Documents/dm_control/dm_control/suite/acrobot_Imitation_learning/robot-imitation-learning-framework/data/merged_imitation_data.csv"   
 obs_cols = ["time", "theta1", "theta2", "dtheta1", "dtheta2"]
 act_col = "control"
 
@@ -15,7 +14,7 @@ policy = PolicyNetwork(obs_dim=5, act_dim=1)
 reward_net = RewardNet(obs_dim=5, act_dim=1)
 value_net = ValueNet(obs_dim=5)
 
-expert_dataset = ExpertDatasetAIRL(
+expert_dataset = ExpertDataset(
     expert_csv, obs_cols, act_col
 )
 

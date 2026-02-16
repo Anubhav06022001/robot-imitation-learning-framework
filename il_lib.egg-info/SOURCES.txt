@@ -1,0 +1,17 @@
+README.md
+setup.py
+il_lib/__init__.py
+il_lib/envs.py
+il_lib/losses.py
+il_lib/models.py
+il_lib.egg-info/PKG-INFO
+il_lib.egg-info/SOURCES.txt
+il_lib.egg-info/dependency_links.txt
+il_lib.egg-info/top_level.txt
+il_lib/trainer/__init__.py
+il_lib/trainer/airl_trainer.py
+il_lib/trainer/gail_trainer.py
+il_lib/trainer/policy_updater.py
+tests/test_env.py
+tests/test_models.py
+tests/test_trainer_sanity.py
